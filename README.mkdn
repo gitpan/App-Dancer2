@@ -1,0 +1,51 @@
+# NAME
+
+App::Dancer2 - App to use dancer2 in your project
+
+# VERSION
+
+version 0.01
+
+# ATTRIBUTES
+
+## app
+
+The app params will create a new dancer2 apps with basic configuration.
+
+dancer2 --app myApps
+
+## app\_mode
+
+You can select between multiple mode.
+
+Mode 'basic' : simple configuration without database
+
+## app\_with\_git
+
+Initialize git apps. It will use the submodule mode to fetch dancer2 instead of fetching the zip file
+
+# METHODS
+
+## create\_app
+
+    Initialize an new apps. Used inside the binary apps dancer2.
+
+# BUGS
+
+Please report any bugs or feature requests on the bugtracker website
+http://tasks.celogeek.com/projects/perl-dancer2-app-dancer2
+
+When submitting a bug or request, please include a test-file or a
+patch to an existing test-file that illustrates the bug or desired
+feature.
+
+# AUTHOR
+
+celogeek <me@celogeek.com>
+
+# COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2012 by celogeek <me@celogeek.com>.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
