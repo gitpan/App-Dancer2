@@ -12,7 +12,7 @@ package App::Dancer2;
 
 use strict;
 use warnings;
-our $VERSION = '0.01';    # VERSION
+our $VERSION = '0.02';    # VERSION
 use Carp;
 use feature 'say';
 use Moo;
@@ -23,6 +23,7 @@ use Path::Class;
 use Git::Repository;
 use LWP::Curl;
 use Archive::Extract;
+use DateTime;
 
 option 'app' => (
     is     => 'ro',
@@ -36,13 +37,20 @@ option 'app' => (
 
 option 'app_mode' => (
     is      => 'ro',
-    doc     => 'Use mode: basic',
+    doc     => 'Use mode: basic, distzilla',
     format  => 's',
     default => sub {'basic'},
+    trigger => sub {
+        my ( $self, $val ) = @_;
+        if ( $val eq 'distzilla' ) {
+            $self->app_with_git(1);
+        }
+        return;
+    }
 );
 
 option 'app_with_git' => (
-    is  => 'ro',
+    is  => 'rw',
     doc => 'Use a pure git repository for your apps',
 );
 
@@ -80,7 +88,9 @@ sub _dist_dir {
 
 sub _copy_dist {
     my ( $self, $from, $to ) = @_;
-    my $app = $self->app;
+    my $app          = $self->app;
+    my $now          = DateTime->now();
+    my $current_year = $now->year;
     $from = dir($from) unless ref $from eq 'Path::Class::Dir';
     $to   = dir($to)   unless ref $to eq 'Path::Class::Dir';
     $from->recurse(
@@ -99,7 +109,11 @@ sub _copy_dist {
                 say "Copying to $dest ...";
                 my $content = $child->slurp;
                 $content =~ s/\Q[%APP%]\E/$app/gx;
+                $content =~ s/\Q[%CURRENT_YEAR%]\E/$current_year/gx;
                 $dest->spew($content);
+                if ( substr( $dest, -3 ) eq '.sh' ) {
+                    chmod 0755, $dest;
+                }
             }
         }
     );
@@ -152,7 +166,7 @@ App::Dancer2 - App to use dancer2 in your project
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 ATTRIBUTES
 
@@ -167,6 +181,8 @@ dancer2 --app myApps
 You can select between multiple mode.
 
 Mode 'basic' : simple configuration without database
+
+Mode 'distzilla' : same as basic, with a default distzilla project. It will allow to deploy your apps with dzil --release command.
 
 =head2 app_with_git
 

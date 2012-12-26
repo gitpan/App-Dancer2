@@ -22,7 +22,7 @@ my %module_build_args = (
     "celogeek <me\@celogeek.com>"
   ],
   "dist_name" => "App-Dancer2",
-  "dist_version" => "0.01",
+  "dist_version" => "0.02",
   "license" => "perl",
   "module_name" => "App::Dancer2",
   "recommends" => {},
@@ -31,6 +31,7 @@ my %module_build_args = (
     "Archive::Extract" => 0,
     "Archive::Zip" => 0,
     "Carp" => 0,
+    "DateTime" => 0,
     "File::Path" => 0,
     "File::ShareDir" => 0,
     "Git::Repository" => 0,

@@ -4,7 +4,7 @@ App::Dancer2 - App to use dancer2 in your project
 
 # VERSION
 
-version 0.01
+version 0.02
 
 # ATTRIBUTES
 
@@ -19,6 +19,8 @@ dancer2 --app myApps
 You can select between multiple mode.
 
 Mode 'basic' : simple configuration without database
+
+Mode 'distzilla' : same as basic, with a default distzilla project. It will allow to deploy your apps with dzil --release command.
 
 ## app\_with\_git
 

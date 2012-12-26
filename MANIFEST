@@ -12,6 +12,13 @@ share/app/basic/bin/app.psgi.tpl
 share/app/basic/config.yml.tpl
 share/app/basic/lib/[%APP%].pm.tpl
 share/app/basic/views/index.tt.tpl
+share/app/distzilla/Changes.tpl
+share/app/distzilla/bin/app.psgi.tpl
+share/app/distzilla/config.yml.tpl
+share/app/distzilla/dist.ini.tpl
+share/app/distzilla/lib/[%APP%].pm.tpl
+share/app/distzilla/scripts/deploy.sh.tpl
+share/app/distzilla/views/index.tt.tpl
 t/00-compile.t
 t/000-report-versions.t
 t/author-critic.t

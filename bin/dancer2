@@ -11,7 +11,7 @@
 # ABSTRACT: dancer2 tools
 use strict;
 use warnings;
-our $VERSION = '0.01'; # VERSION
+our $VERSION = '0.02'; # VERSION
 #
 use App::Dancer2;
 
@@ -32,7 +32,7 @@ dancer2 - dancer2 tools
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 BUGS
 
