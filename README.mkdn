@@ -4,7 +4,7 @@ App::Dancer2 - App to use dancer2 in your project
 
 # VERSION
 
-version 0.02
+version 0.03
 
 # ATTRIBUTES
 
@@ -26,11 +26,19 @@ Mode 'distzilla' : same as basic, with a default distzilla project. It will allo
 
 Initialize git apps. It will use the submodule mode to fetch dancer2 instead of fetching the zip file
 
+## install\_head
+
+Install Dancer2 head with cpanm
+
 # METHODS
 
 ## create\_app
 
     Initialize an new apps. Used inside the binary apps dancer2.
+
+## install\_head\_with\_cpanm
+
+    Install Dancer2 head with cpanm
 
 # BUGS
 

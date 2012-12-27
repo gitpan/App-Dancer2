@@ -23,7 +23,6 @@ requires:
   Archive::Zip: 0
   Carp: 0
   DateTime: 0
-  File::Path: 0
   File::ShareDir: 0
   Git::Repository: 0
   LWP::Curl: 0
@@ -38,7 +37,7 @@ resources:
   bugtracker: http://tasks.celogeek.com/projects/perl-dancer2-app-dancer2
   homepage: https://gitorious.celogeek.com/perl-dancer2/app-dancer2
   repository: git://gitorious.celogeek.com/perl-dancer2/app-dancer2.git
-version: 0.02
+version: 0.03
 x_Dist_Zilla:
   perl:
     version: 5.016002

@@ -11,13 +11,15 @@
 # ABSTRACT: dancer2 tools
 use strict;
 use warnings;
-our $VERSION = '0.02'; # VERSION
+our $VERSION = '0.03'; # VERSION
 #
 use App::Dancer2;
 
 my $opt = App::Dancer2->new_with_options;
 if ($opt->app) {
     $opt->create_app;
+} elsif ($opt->install_head) {
+    $opt->install_head_with_cpanm;
 } else {
     $opt->options_usage;
 }
@@ -32,7 +34,7 @@ dancer2 - dancer2 tools
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 BUGS
 
