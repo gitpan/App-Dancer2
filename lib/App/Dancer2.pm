@@ -12,7 +12,7 @@ package App::Dancer2;
 
 use strict;
 use warnings;
-our $VERSION = '0.03';    # VERSION
+our $VERSION = '0.04';    # VERSION
 use Carp;
 use feature 'say';
 use Moo;
@@ -20,7 +20,7 @@ use MooX::Options;
 use File::ShareDir ':ALL';
 use Path::Class;
 use Git::Repository;
-use LWP::Curl;
+use LWP::Simple;
 use Archive::Extract;
 use DateTime;
 
@@ -170,9 +170,8 @@ sub _fetch_latest_dancer2 {
     my ( $self, $dest ) = @_;
     $dest->mkpath(0);
     say "Fetching latest dancer2 archive ...";
-    my $lwpc    = LWP::Curl->new();
-    my $content = $lwpc->get(
-        'https://github.com/PerlDancer/Dancer2/archive/master.zip');
+    my $content
+        = get('https://github.com/PerlDancer/Dancer2/archive/master.zip');
     say "Extract archive ...";
     my $tmp = file('/tmp/dancer2.zip');
     $tmp->spew($content);
@@ -193,7 +192,7 @@ App::Dancer2 - App to use dancer2 in your project
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 ATTRIBUTES
 

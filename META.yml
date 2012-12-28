@@ -25,7 +25,7 @@ requires:
   DateTime: 0
   File::ShareDir: 0
   Git::Repository: 0
-  LWP::Curl: 0
+  LWP::Simple: 0
   Moo: 0
   MooX::Options: 3.76
   Path::Class: 0
@@ -37,7 +37,7 @@ resources:
   bugtracker: http://tasks.celogeek.com/projects/perl-dancer2-app-dancer2
   homepage: https://gitorious.celogeek.com/perl-dancer2/app-dancer2
   repository: git://gitorious.celogeek.com/perl-dancer2/app-dancer2.git
-version: 0.03
+version: 0.04
 x_Dist_Zilla:
   perl:
     version: 5.016002
