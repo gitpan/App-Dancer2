@@ -4,7 +4,7 @@ App::Dancer2 - App to use dancer2 in your project
 
 # VERSION
 
-version 0.04
+version 0.05
 
 # ATTRIBUTES
 
