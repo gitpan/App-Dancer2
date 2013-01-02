@@ -71,7 +71,7 @@
          "web" : "https://gitorious.celogeek.com/perl-dancer2/app-dancer2"
       }
    },
-   "version" : "0.07",
+   "version" : "0.08",
    "x_Dist_Zilla" : {
       "perl" : {
          "version" : "5.016002"

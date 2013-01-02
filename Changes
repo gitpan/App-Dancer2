@@ -1,3 +1,7 @@
+0.08      2013-01-02 17:33:59 Europe/Paris
+
+    Fix clone git submodule
+
 0.07      2013-01-02 17:16:33 Europe/Paris
 
     Add deps for HTTPS support

@@ -12,7 +12,7 @@ package App::Dancer2;
 
 use strict;
 use warnings;
-our $VERSION = '0.07';    # VERSION
+our $VERSION = '0.08';    # VERSION
 use Carp;
 use feature 'say';
 use Moo;
@@ -158,9 +158,10 @@ sub _init_git {
     $r->run( add => '.' );
     $r->run( commit => '-m', 'init dancer2 project' );
     say "Fetching vendors/Dancer2";
-    $r->run(
+    Git::Repository->run(
         submodule => 'add',
-        'git://github.com/PerlDancer/Dancer2.git', 'vendors/Dancer2'
+        'git://github.com/PerlDancer/Dancer2.git', 'vendors/Dancer2',
+        { cwd => $dest }
     );
     $r->run( commit => '-m', 'plug git dancer2 head' );
     return;
@@ -192,7 +193,7 @@ App::Dancer2 - App to use dancer2 in your project
 
 =head1 VERSION
 
-version 0.07
+version 0.08
 
 =head1 ATTRIBUTES
 

@@ -38,7 +38,7 @@ resources:
   bugtracker: http://tasks.celogeek.com/projects/perl-dancer2-app-dancer2
   homepage: https://gitorious.celogeek.com/perl-dancer2/app-dancer2
   repository: git://gitorious.celogeek.com/perl-dancer2/app-dancer2.git
-version: 0.07
+version: 0.08
 x_Dist_Zilla:
   perl:
     version: 5.016002
