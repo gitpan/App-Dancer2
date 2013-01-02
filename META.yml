@@ -37,7 +37,7 @@ resources:
   bugtracker: http://tasks.celogeek.com/projects/perl-dancer2-app-dancer2
   homepage: https://gitorious.celogeek.com/perl-dancer2/app-dancer2
   repository: git://gitorious.celogeek.com/perl-dancer2/app-dancer2.git
-version: 0.05
+version: 0.06
 x_Dist_Zilla:
   perl:
     version: 5.016002
@@ -45,7 +45,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::Git::NextVersion
       name: '@Author::Celogeek/Git::NextVersion'
-      version: 2.005
+      version: 2.006
     -
       class: Dist::Zilla::Plugin::NextRelease
       name: '@Author::Celogeek/NextRelease'
@@ -53,19 +53,19 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::Git::Check
       name: '@Author::Celogeek/@Git/Check'
-      version: 2.005
+      version: 2.006
     -
       class: Dist::Zilla::Plugin::Git::Commit
       name: '@Author::Celogeek/@Git/Commit'
-      version: 2.005
+      version: 2.006
     -
       class: Dist::Zilla::Plugin::Git::Tag
       name: '@Author::Celogeek/@Git/Tag'
-      version: 2.005
+      version: 2.006
     -
       class: Dist::Zilla::Plugin::Git::Push
       name: '@Author::Celogeek/@Git/Push'
-      version: 2.005
+      version: 2.006
     -
       class: Dist::Zilla::Plugin::GatherDir
       name: '@Author::Celogeek/@Filter/GatherDir'
