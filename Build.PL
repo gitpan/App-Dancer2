@@ -22,7 +22,7 @@ my %module_build_args = (
     "celogeek <me\@celogeek.com>"
   ],
   "dist_name" => "App-Dancer2",
-  "dist_version" => "0.06",
+  "dist_version" => "0.07",
   "license" => "perl",
   "module_name" => "App::Dancer2",
   "recommends" => {},
@@ -34,6 +34,7 @@ my %module_build_args = (
     "DateTime" => 0,
     "File::ShareDir" => 0,
     "Git::Repository" => 0,
+    "LWP::Protocol::https" => 0,
     "LWP::Simple" => 0,
     "Moo" => 0,
     "MooX::Options" => "3.76",

@@ -38,6 +38,7 @@
             "DateTime" : "0",
             "File::ShareDir" : "0",
             "Git::Repository" : "0",
+            "LWP::Protocol::https" : "0",
             "LWP::Simple" : "0",
             "Moo" : "0",
             "MooX::Options" : "3.76",
@@ -70,12 +71,17 @@
          "web" : "https://gitorious.celogeek.com/perl-dancer2/app-dancer2"
       }
    },
-   "version" : "0.06",
+   "version" : "0.07",
    "x_Dist_Zilla" : {
       "perl" : {
          "version" : "5.016002"
       },
       "plugins" : [
+         {
+            "class" : "Dist::Zilla::Plugin::GatherDir",
+            "name" : "GatherDir",
+            "version" : "4.300028"
+         },
          {
             "class" : "Dist::Zilla::Plugin::Git::NextVersion",
             "name" : "@Author::Celogeek/Git::NextVersion",
@@ -105,11 +111,6 @@
             "class" : "Dist::Zilla::Plugin::Git::Push",
             "name" : "@Author::Celogeek/@Git/Push",
             "version" : "2.006"
-         },
-         {
-            "class" : "Dist::Zilla::Plugin::GatherDir",
-            "name" : "@Author::Celogeek/@Filter/GatherDir",
-            "version" : "4.300028"
          },
          {
             "class" : "Dist::Zilla::Plugin::PruneCruft",
