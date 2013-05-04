@@ -12,7 +12,7 @@ package App::Dancer2;
 
 use strict;
 use warnings;
-our $VERSION = '0.08';    # VERSION
+our $VERSION = '0.09';    # VERSION
 use Carp;
 use feature 'say';
 use Moo;
@@ -193,7 +193,7 @@ App::Dancer2 - App to use dancer2 in your project
 
 =head1 VERSION
 
-version 0.08
+version 0.09
 
 =head1 ATTRIBUTES
 

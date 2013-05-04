@@ -14,7 +14,7 @@ BEGIN {
     my @vendors = glob($Bin."/../vendors/*/lib");
     push @INC, @vendors;
 }
-use Dancer;
+use Dancer2;
 use [%APP%];
 
 start;

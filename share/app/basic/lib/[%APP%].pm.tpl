@@ -1,7 +1,7 @@
 package [%APP%];
 use strict;
 use warnings;
-use Dancer;
+use Dancer2;
 
 get '/' => sub {
     template 'index';

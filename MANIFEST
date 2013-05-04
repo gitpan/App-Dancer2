@@ -17,9 +17,7 @@ share/app/basic/bin/app.psgi.tpl
 share/app/basic/config.yml.tpl
 share/app/basic/environments/.gitkeep.tpl
 share/app/basic/environments/development.yml.tpl
-share/app/basic/environments/preprod.yml.tpl
-share/app/basic/environments/prod.yml.tpl
-share/app/basic/environments/testing.yml.tpl
+share/app/basic/environments/production.yml.tpl
 share/app/basic/lib/.gitkeep.tpl
 share/app/basic/lib/[%APP%].pm.tpl
 share/app/basic/logs/.gitkeep.tpl
@@ -36,9 +34,7 @@ share/app/distzilla/config.yml.tpl
 share/app/distzilla/dist.ini.tpl
 share/app/distzilla/environments/.gitkeep.tpl
 share/app/distzilla/environments/development.yml.tpl
-share/app/distzilla/environments/preprod.yml.tpl
-share/app/distzilla/environments/prod.yml.tpl
-share/app/distzilla/environments/testing.yml.tpl
+share/app/distzilla/environments/production.yml.tpl
 share/app/distzilla/lib/.gitkeep.tpl
 share/app/distzilla/lib/[%APP%].pm.tpl
 share/app/distzilla/logs/.gitkeep.tpl
